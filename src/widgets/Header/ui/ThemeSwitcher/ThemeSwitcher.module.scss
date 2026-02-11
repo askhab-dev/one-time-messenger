@@ -1,0 +1,13 @@
+@reference "tailwindcss";
+
+.switcher {
+  @apply cursor-pointer rounded-md border-2;
+}
+
+.iconWrapper {
+  @apply flex;
+}
+
+.icon {
+  @apply m-2;
+}

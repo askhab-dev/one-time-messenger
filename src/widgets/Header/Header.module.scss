@@ -1,0 +1,21 @@
+@reference "tailwindcss";
+
+.header {
+  @apply fixed w-full h-[70px] flex items-center justify-between p-4;
+}
+
+.homeLink {
+  @apply flex items-center;
+}
+
+.logo {
+  @apply mr-2;
+}
+
+.title {
+  @apply text-lg font-semibold;
+}
+
+.switchers {
+  @apply flex gap-2;
+}

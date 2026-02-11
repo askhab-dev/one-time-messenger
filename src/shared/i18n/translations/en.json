@@ -1,0 +1,12 @@
+{
+  "header": {
+    "changeLanguage": "Change Language",
+    "changeTheme": "Change Theme"
+  },
+  "main": {
+    "description": "Secure, temporary messaging rooms",
+    "createRoom": "Create Room",
+    "joinRoom": "Join Room",
+    "signIn": "Sign In"
+  }
+}
