@@ -22,17 +22,34 @@ export const HomePage = () => {
         <h2 className={styles.description}>{t('main.description')}</h2>
 
         <div className={styles.buttonsWrapper}>
-          <Button className='h-14' size='lg' href='/create'>
+          <Button
+            className='h-14'
+            size='lg'
+            href='/create'
+            aria-label='Create room'
+          >
             <MessageSquarePlus className='mr-2 h-5 w-5' />
             {t('main.createRoom')}
           </Button>
 
-          <Button className='h-14' size='lg' variant='ghost' href='/join'>
+          <Button
+            className='h-14'
+            size='lg'
+            variant='ghost'
+            href='/join'
+            aria-label='Join room'
+          >
             <LogIn className='mr-2 h-5 w-5' />
             {t('main.joinRoom')}
           </Button>
 
-          <Button className='h-14' size='lg' variant='secondary' href='auth'>
+          <Button
+            className='h-14'
+            size='lg'
+            variant='secondary'
+            href='auth'
+            aria-label='Sign in'
+          >
             <UserPlus className='mr-2 h-5 w-5' />
             {t('main.signIn')}
           </Button>

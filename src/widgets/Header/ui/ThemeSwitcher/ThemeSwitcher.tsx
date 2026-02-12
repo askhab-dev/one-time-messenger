@@ -21,7 +21,12 @@ export const ThemeSwitcher = () => {
   const ThemeIcon = theme === 'light' ? Sun : Moon;
 
   return (
-    <button type='button' onClick={handleClick} className={styles.switcher}>
+    <button
+      type='button'
+      onClick={handleClick}
+      className={styles.switcher}
+      aria-label='Toggle theme'
+    >
       <AnimatedSwitcher switcher={theme} className={styles.iconWrapper}>
         <ThemeIcon size={20} className={styles.icon} />
       </AnimatedSwitcher>
