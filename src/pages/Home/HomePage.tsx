@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import { useMounted } from '@/shared/lib/hooks/useMounted';
 import '@/shared/i18n';
+import { BaseCard } from '@/shared/ui/BaseCard';
 import { Button } from '@/shared/ui/Button';
 
 import styles from './HomePage.module.scss';
@@ -16,7 +17,7 @@ export const HomePage = () => {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.card}>
+      <BaseCard className={styles.card}>
         <Send className={styles.logo} size={60} />
         <h1 className={styles.title}>OneTime Messenger</h1>
         <h2 className={styles.description}>{t('main.description')}</h2>
@@ -54,7 +55,7 @@ export const HomePage = () => {
             {t('main.signIn')}
           </Button>
         </div>
-      </div>
+      </BaseCard>
     </div>
   );
 };

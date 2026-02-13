@@ -6,8 +6,7 @@
 }
 
 .card {
-  @apply flex flex-col items-center pt-8 p-6 w-[500px];
-  @apply rounded-xl border-1 border-gray-800 shadow-2xl;
+  @apply w-[500px];
 }
 
 .logo {

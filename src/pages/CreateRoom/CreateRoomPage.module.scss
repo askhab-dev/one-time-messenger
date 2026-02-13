@@ -1,0 +1,23 @@
+@reference "tailwindcss";
+
+.wrapper {
+  @apply flex flex-col h-full gap-1 items-center justify-start;
+}
+
+.card {
+  @apply flex flex-col items-start w-[90%] max-w-2xl m-4;
+}
+
+.backBtnWrapper {
+ @apply flex w-[90%] max-w-2xl justify-start;
+}
+
+.backBtn {
+  @apply flex gap-2;
+  @apply border-0 shadow-none ring-0;
+}
+
+.title {
+  @apply mb-3;
+  @apply text-3xl font-bold;
+}

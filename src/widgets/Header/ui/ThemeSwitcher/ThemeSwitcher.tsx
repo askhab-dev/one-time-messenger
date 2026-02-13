@@ -14,8 +14,7 @@ export const ThemeSwitcher = () => {
   if (!mounted) return null;
 
   const handleClick = () => {
-    if (theme === 'light') setTheme('dark');
-    else setTheme('light');
+    setTheme(theme === 'light' ? 'dark' : 'light');
   };
 
   const ThemeIcon = theme === 'light' ? Sun : Moon;

@@ -1,4 +1,7 @@
 {
+  "common": {
+    "cancel": "Cancel"
+  },
   "header": {
     "changeLanguage": "Change Language",
     "changeTheme": "Change Theme"
@@ -8,5 +11,8 @@
     "createRoom": "Create Room",
     "joinRoom": "Join Room",
     "signIn": "Sign In"
+  },
+  "create": {
+    "title": "Create Room"
   }
 }

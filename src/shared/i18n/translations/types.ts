@@ -1,4 +1,7 @@
 export interface TranslationTypes {
+  common: {
+    cancel: string;
+  };
   header: {
     changeLanguage: string;
     changeTheme: string;
@@ -8,5 +11,8 @@ export interface TranslationTypes {
     createRoom: string;
     joinRoom: string;
     signIn: string;
+  };
+  create: {
+    title: string;
   };
 }

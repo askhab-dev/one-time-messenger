@@ -13,7 +13,12 @@
 }
 
 .title {
+  @apply hidden;
   @apply text-lg font-semibold;
+
+  @media (min-width: 350px) {
+    @apply block;
+  }
 }
 
 .switchers {

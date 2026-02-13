@@ -1,4 +1,7 @@
 {
+  "common": {
+    "cancel": "Отмена"
+  },
   "header": {
     "changeLanguage": "Сменить язык",
     "changeTheme": "Сменить тему"
@@ -8,5 +11,8 @@
     "createRoom": "Создать комнату",
     "joinRoom": "Присоединиться к комнате",
     "signIn": "Войти"
+  },
+  "create": {
+    "title": "Создать комнату"
   }
 }
