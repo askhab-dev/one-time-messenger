@@ -43,6 +43,21 @@
 
   --card: #ffffff;
   --card-foreground: #171717;
+
+  --btn-primary-bg: var(--primary);
+  --btn-primary-text: var(--primary-foreground);
+  --btn-primary-bg-hover: oklch(0.1 0 0);
+  --btn-primary-ring: oklch(0.6 0.2 260);
+
+  --btn-secondary-bg: var(--secondary);
+  --btn-secondary-text: var(--secondary-foreground);
+  --btn-secondary-bg-hover: oklch(0.85 0 0);
+  --btn-secondary-ring: var(--ring);
+
+  --btn-destructive-bg: var(--destructive);
+  --btn-destructive-text: var(--destructive-foreground);
+  --btn-destructive-bg-hover: oklch(0.45 0.15 25);
+  --btn-destructive-ring: oklch(0.7 0.2 20);
 }
 
 [data-mode='dark'] {
@@ -73,34 +88,40 @@
 
   --card: oklch(0.145 0 0);
   --card-foreground: oklch(0.985 0 0);
-}
 
+  --btn-primary-bg: var(--primary);
+  --btn-primary-text: var(--primary-foreground);
+  --btn-primary-bg-hover: oklch(0.9 0 0);
+  --btn-primary-ring: oklch(0.7 0.15 260);
+
+  --btn-secondary-bg: var(--secondary);
+  --btn-secondary-text: var(--secondary-foreground);
+  --btn-secondary-bg-hover: oklch(0.35 0 0);
+  --btn-secondary-ring: var(--ring);
+
+  --btn-destructive-bg: var(--destructive);
+  --btn-destructive-text: var(--destructive-foreground);
+  --btn-destructive-bg-hover: oklch(0.48 0.15 25);
+  --btn-destructive-ring: oklch(0.6 0.2 20);
+}
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
-
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
-
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
-
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
-
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
-
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
-
   --color-border: var(--border);
   --color-input-background: var(--input-background);
   --color-ring: var(--ring);
@@ -111,25 +132,59 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-
-  html {
-    font-size: var(--font-size);
-  }
-
-  body {
-    @apply bg-background text-foreground;
-  }
-
-  h1 { @apply text-2xl font-medium leading-normal; }
-  h2 { @apply text-xl font-medium leading-normal; }
-  h3 { @apply text-lg font-medium leading-normal; }
-  h4 { @apply text-base font-medium leading-normal; }
-
-  label { @apply text-base font-medium leading-normal; }
-  button { @apply text-base font-medium leading-normal; }
-  input { @apply text-base font-normal leading-normal; }
+* {
+  @apply border-border outline-ring/50;
 }
+
+html {
+  font-size: var(--font-size);
+}
+
+body {
+  @apply bg-background text-foreground;
+}
+
+.button {
+  @apply inline-flex items-center justify-center;
+  @apply font-medium rounded-md select-none whitespace-nowrap transition-all duration-200;
+  @apply hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 active:scale-95;
+}
+
+.button-primary {
+  @apply bg-[var(--btn-primary-bg)] text-[var(--btn-primary-text)] shadow-md;
+}
+.button-primary:hover {
+  @apply bg-[var(--btn-primary-bg-hover)] shadow-lg;
+}
+.button-primary:focus {
+  @apply ring-[var(--btn-primary-ring)];
+}
+
+.button-secondary {
+  @apply bg-[var(--btn-secondary-bg)] text-[var(--btn-secondary-text)] shadow-sm;
+}
+.button-secondary:hover {
+  @apply bg-[var(--btn-secondary-bg-hover)] shadow-md;
+}
+.button-secondary:focus {
+  @apply ring-[var(--btn-secondary-ring)];
+}
+
+.button-destructive {
+  @apply bg-[var(--btn-destructive-bg)] text-[var(--btn-destructive-text)] shadow-sm;
+}
+.button-destructive:hover {
+  @apply bg-[var(--btn-destructive-bg-hover)] shadow-md;
+}
+.button-destructive:focus {
+  @apply ring-[var(--btn-destructive-ring)];
+}
+
+.button-ghost {
+  @apply hover:bg-[var(--muted)] focus:ring-[var(--ring)];
+}
+
+.button-sm { @apply px-3 py-1.5 text-sm; }
+.button-md { @apply px-4 py-2 text-base; }
+.button-lg { @apply px-5 py-2.5 text-lg; }
+.button-icon { @apply size-9 rounded-md; }
