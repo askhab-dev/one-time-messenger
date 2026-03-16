@@ -17,7 +17,7 @@ const lifeTimeAfterCreationOptions = [
   { value: 60, label: '1 час' },
   { value: 240, label: '4 часа' },
   { value: 1440, label: '24 часа' },
-];
+] as const;
 
 type LifeTimeAfterCreationOption =
   (typeof lifeTimeAfterCreationOptions)[number]['value'];
@@ -66,7 +66,7 @@ export const CreateRoomForm: React.FC = () => {
         />
       </div>
 
-      <div>
+      <div className='space-y-2'>
         <Label htmlFor='maxPartisipants' className='flex items-center gap-2'>
           <Users className='h-4 w-4 text-muted-foreground' /> Max Partisipants
         </Label>
